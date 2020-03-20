@@ -1,0 +1,44 @@
+{
+    "name": "Calculate Percentage",
+    "short_name": "Calculate Percentage",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#373B44",
+    "theme_color": "#373B44",
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "calc-img.png",
+        "type": "image/png", "sizes": "72x72"
+      },
+      {
+        "src": "calc-img.png",
+        "type": "image/png", "sizes": "96x96"
+      },
+      {
+        "src": "calc-img.png",
+        "type": "image/png","sizes": "128x128"
+      },
+      {
+        "src": "calc-img.png",
+        "type": "image/png", "sizes": "144x144"
+      },
+      {
+        "src": "calc-img.png",
+        "type": "image/png", "sizes": "152x152"
+      },
+      {
+        "src": "calc-img.png",
+        "type": "image/png", "sizes": "192x192"
+      },
+      {
+        "src": "calc-img.png",
+        "type": "image/png", "sizes": "384x384"
+      },
+      {
+        "src": "calc-img.png",
+        "type": "image/png", "sizes": "512x512"
+      }
+      
+    ]
+  }

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Percentage calculator</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <style>
+            body
+            {
+                height:100vh;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                background:#0a0a0a;
+
+            }
+            .container
+            {
+               box-sizing:border-box;
+               background:#fff;
+               border-radius:20px;
+               border:1px solid black;
+               min-height:200px;
+               min-width:400px;
+               padding:50px;
+                box-shadow:0px 1px 20px 0px rgba(46, 61, 73, 0.2);
+            }
+            #input-percent,
+             #result-percent
+            {
+                height:50px;
+                width:100%;
+                border:1px solid black;
+                font-size:1.8rem;
+                text-align:center;
+                margin:10px;
+            }
+           
+        
+            .ref-text
+            {
+                margin:5px auto;
+                font-size:1.5rem;
+             }
+             h3
+             {
+                 margin:5px auto;
+             }
+             #calc-percent
+             {
+                 display:block;
+                 height:40px;
+                 margin:5px auto;
+                 background: rgba(255, 95, 109, 1);
+                 border:1px solid rgba(255, 95, 109, 1);
+                 color: white;
+                 font-size:1rem;
+                 font-weight:bolder;
+            }
+            #calc-percent:hover
+            {
+                background:rgba(247, 183, 51, 1);
+                border:1px solid rgba(247, 183, 51, 1);
+                color:white;
+            }
+
+
+        </style>
+        <!--Web app manfest file for android devices-->
+      <link rel="manifest" href="manifest.json" />
+      <meta name="theme-color" content="#fff" />
+    </head>
+
+    <body >
+        <div class="container" >
+            <p class="ref-text">Please enter the marks out of 600 here : </p>
+            <input type="number"  name="input-num" id="input-percent" placeholder="Enter the total number"/>
+            <p class="ref-text">Result :</p>
+            <input type="number" name="result-input" id="result-percent" placeholder="Result"/>
+            <button id="calc-percent">Calculate Percentage</button>
+             
+        </div>
+    </body>
+    <script>
+        if ("serviceWorker" in navigator) 
+    {
+        window.addEventListener("load", function() 
+        {
+        navigator.serviceWorker
+            .register("service-worker.js")
+            .then(res => console.log("service worker registered"))
+            .catch(err => console.log("service worker not registered", err))
+        })
+    }
+  </script>
+   
+    <script>
+        
+        var calcResultBtn=document.getElementById('calc-percent');
+        var result=document.getElementById('result-percent');
+
+            calcResultBtn.addEventListener('click',function(){
+                    var inputMarks=document.getElementById('input-percent').value;
+                    result.value=inputMarks/6;
+            });
+           
+    </script>
+</html>
