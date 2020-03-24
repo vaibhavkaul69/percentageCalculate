@@ -22,12 +22,11 @@
                border-radius:20px;
                border:1px solid black;
                min-height:200px;
-               min-width:400px;
+               width:500px;
                padding:50px;
                 box-shadow:0px 1px 20px 0px rgba(46, 61, 73, 0.2);
             }
-            #input-percent,
-             #result-percent
+            #input-percent
             {
                 height:50px;
                 width:100%;
@@ -36,8 +35,23 @@
                 text-align:center;
                 margin:10px;
             }
-           
-        
+            #result-percent
+            {
+                height:50px;
+                width:80%;
+                border:1px solid black;
+                font-size:1.8rem;
+                text-align:center;
+                margin:10px;
+            }
+           span{
+               font-size:2rem;
+               font-weight:bolder;
+               float:right;
+               position:relative;
+               top:20px;
+    
+           }
             .ref-text
             {
                 margin:5px auto;
@@ -51,7 +65,7 @@
              {
                  display:block;
                  height:40px;
-                 margin:5px auto;
+                 margin:20px auto;
                  background: rgba(255, 95, 109, 1);
                  border:1px solid rgba(255, 95, 109, 1);
                  color: white;
@@ -65,6 +79,67 @@
                 color:white;
             }
 
+            @media only screen and (max-width:650px)
+            {
+               
+                        #result-percent
+                    {
+                        
+                        position:static;
+                        width:80%;
+                    }
+                        span
+                        {
+                            font-size:2rem;
+                            font-weight:bolder;
+                            float:right;
+                            position:relative;
+                            top:20px;
+                        }
+                    
+            }
+            @media only screen and (max-width:400px)
+            {
+                .container
+                {
+                    min-width:100%;
+                }
+                    #input-percent
+                {
+                    font-size:1.3rem;
+                    
+                }
+                     #result-percent
+                {
+                    font-size:1.3rem;
+                    width:50%;
+                }
+            }
+            @media only screen and (max-width:390px)
+            {
+                #result-percent
+                {
+                    font-size:1rem;
+                    width:75%;
+                }
+                span
+                {
+                    font-size:2rem;
+                    font-weight:bolder;
+                    float:right;
+                    position:relative;
+                    top:20px;
+                }
+
+            }
+
+            @media only screen and (max-width:340px)
+            {
+                .container
+                {
+                    padding:25px;
+                }
+            }
 
         </style>
         <!--Web app manfest file for android devices-->
@@ -78,7 +153,7 @@
             <input type="number"  name="input-num" id="input-percent" placeholder="Enter the total number"/>
             <button id="calc-percent">Calculate Percentage</button>
             <p class="ref-text">Result :</p>
-            <input type="number" name="result-input" id="result-percent" disabled readonly placeholder="Result"/>
+            <input type="number" name="result-input" id="result-percent" disabled readonly placeholder="Result" /><span>%</span>
             <ol>
                 <li>This app calculates percentage out of 100 for a total of 6 subjects.</li>
                 <li>Click on the Calculate Percentage button and it will show the result in the box below the button.</li>
@@ -106,7 +181,16 @@
 
             calcResultBtn.addEventListener('click',function(){
                     var inputMarks=document.getElementById('input-percent').value;
-                    result.value=inputMarks/6;
+                    if(inputMarks.length>0 && inputMarks<600)
+                    {
+                        result.value=Math.abs(inputMarks)/6;
+                        
+                    }
+                    else{
+                        alert('So You Think I Am a Fool ! \n Enter a Non Zero Value Less than 600*');
+                        document.getElementById('input-percent').value='';
+                    }
+                    
             });
            
     </script>
