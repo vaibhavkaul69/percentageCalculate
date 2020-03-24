@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Percentage calculator</title>
+        <link rel="icon" href="calc-img.png"/>
         <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
         <style>
             body
@@ -17,6 +18,7 @@
             {
                box-sizing:border-box;
                background:#fff;
+               display:block;
                border-radius:20px;
                border:1px solid black;
                min-height:200px;
@@ -74,11 +76,15 @@
         <div class="container" >
             <p class="ref-text">Please enter the marks out of 600 here : </p>
             <input type="number"  name="input-num" id="input-percent" placeholder="Enter the total number"/>
-            <p class="ref-text">Result :</p>
-            <input type="number" name="result-input" id="result-percent" placeholder="Result"/>
             <button id="calc-percent">Calculate Percentage</button>
-             
+            <p class="ref-text">Result :</p>
+            <input type="number" name="result-input" id="result-percent" disabled readonly placeholder="Result"/>
+            <ol>
+                <li>This app calculates percentage out of 100 for a total of 6 subjects.</li>
+                <li>Click on the Calculate Percentage button and it will show the result in the box below the button.</li>
+            </ol>
         </div>
+       
     </body>
     <script>
         if ("serviceWorker" in navigator) 

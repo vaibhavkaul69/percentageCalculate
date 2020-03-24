@@ -3,8 +3,8 @@
     "short_name": "Calculate Percentage",
     "start_url": "index.html",
     "display": "standalone",
-    "background_color": "#373B44",
-    "theme_color": "#373B44",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
     "orientation": "portrait-primary",
     "icons": [
       {
