@@ -56,6 +56,16 @@
             {
                 margin:5px auto;
                 font-size:1.5rem;
+                display: inline;
+             }
+             #grading
+             {
+                font-size:1.2rem;
+                margin:auto 1rem;
+                color:#0f9b0f;
+                font-family: 'Courier New', Courier, monospace;
+                font-weight:bolder;
+                display: inline;
              }
              h3
              {
@@ -153,6 +163,7 @@
             <input type="number"  name="input-num" id="input-percent" placeholder="Enter the total number"/>
             <button id="calc-percent">Calculate Percentage</button>
             <p class="ref-text">Result :</p>
+            <p id="grading"></p>
             <input type="number" name="result-input" id="result-percent" disabled readonly placeholder="Result" /><span>%</span>
             <ol>
                 <li>This app calculates percentage out of 100 for a total of 6 subjects.</li>
@@ -179,11 +190,33 @@
         var calcResultBtn=document.getElementById('calc-percent');
         var result=document.getElementById('result-percent');
 
+
             calcResultBtn.addEventListener('click',function(){
                     var inputMarks=document.getElementById('input-percent').value;
                     if(inputMarks.length>0 && inputMarks>0 && inputMarks<=600)
                     {
                         result.value=inputMarks/6;
+                        if(result.value>=0 && result.value<40)
+                        {
+                            document.getElementById('grading').innerHTML='  Fail.!';
+                            document.getElementById('grading').style.color='#c31432';
+                        }
+                        else if(result.value>=40 && result.value<50)
+                        {
+                            document.getElementById('grading').innerHTML=' Third Division.!';
+                            document.getElementById('grading').style.color='#009fff';
+                            
+                        }
+                        else if(result.value>=50 && result.value<60)
+                        {
+                            document.getElementById('grading').innerHTML=' Second Division.!';
+                            document.getElementById('grading').style.color='#fc4a1a';
+                        }
+                        else
+                        {
+                            document.getElementById('grading').innerHTML=' Distinction.!';
+                            document.getElementById('grading').style.color='#0f9b0f';
+                        }
                         
                     }
                     else{
