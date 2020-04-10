@@ -8,35 +8,35 @@
     "orientation": "portrait-primary",
     "icons": [
       {
-        "src": "calc-img.png",
+        "src": "calc-img-72x72.png",
         "type": "image/png", "sizes": "72x72"
       },
       {
-        "src": "calc-img.png",
+        "src": "calc-img-96x96.png",
         "type": "image/png", "sizes": "96x96"
       },
       {
-        "src": "calc-img.png",
+        "src": "calc-img-128x128.png",
         "type": "image/png","sizes": "128x128"
       },
       {
-        "src": "calc-img.png",
+        "src": "calc-img-144x144.png",
         "type": "image/png", "sizes": "144x144"
       },
       {
-        "src": "calc-img.png",
+        "src": "calc-img-152x152.png",
         "type": "image/png", "sizes": "152x152"
       },
       {
-        "src": "calc-img.png",
+        "src": "calc-img-192x192.png",
         "type": "image/png", "sizes": "192x192"
       },
       {
-        "src": "calc-img.png",
+        "src": "calc-img-384x384.png",
         "type": "image/png", "sizes": "384x384"
       },
       {
-        "src": "calc-img.png",
+        "src": "calc-img-512x512.png",
         "type": "image/png", "sizes": "512x512"
       }
       
